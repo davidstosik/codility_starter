@@ -7,7 +7,7 @@ A text editor that is able to run tests is provided in the browser, but nothing 
 
 Going through multiple exercises to practice, I realized that I keep writing the same boilerplate code:
 
-- I like to be in a class which allows me to extract concepts to private methods (helps with readability).
+- I like to be in a class which allows me to extract concepts to private methods (helps with readability) and memoize them (can help with performance).
 - Having Minitest available to write tests can be very convenient.
 - When the exercise requires a performant solution, benchmarking tools come very handy.
 
