@@ -62,8 +62,12 @@ begin
 
     def generate_candidates
       self.class.bench_range.map do |size|
-        Array.new(size)
-      end
+        [size, generate_candidate(size)]
+      end.to_h
+    end
+
+    def generate_candidate(size)
+      Array.new(size)
     end
   end
 
