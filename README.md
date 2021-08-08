@@ -188,7 +188,7 @@ Before getting started with the test, which is timed, you will want to make sure
 - Install the right version of Ruby (2.2.x)
     You may face troubles, such as the ones I did when I tried to install Ruby 2.2.9 on macOS Big Sur a few days ago. ([This helped.](https://stackoverflow.com/a/65525762))
     You definitely don't want to be wasting your precious test time on such problem.
-If you use a tool like [Dash](https://kapeli.com/dash), make sure you have it point to the right version of the documentation.
+- If you use a tool like [Dash](https://kapeli.com/dash), make sure you have it point to the right version of the documentation.
 - Get your tools ready: is your system up-to-date? Your laptop charged? Do you have your favorite editor set up properly?
 - Get familiar with the template if you plan to use it.
 - Get familiar with Codility. It is worth going through a few trial runs to get used with Codility's UI and concepts. There are plenty of challenges, lessons and trainings which you can do to get an idea.
