@@ -48,11 +48,11 @@ begin
     end
 
     def bench_solution
-      #assert_performance_constant do |size|
-      #assert_performance_linear do |size|
-      #assert_performance_exponential do |size|
-      #assert_performance_logarithmic do |size|
-      #assert_performance_power do |size|
+      #assert_performance_constant do |size| # O(1)
+      #assert_performance_logarithmic do |size| # O(log N)
+      #assert_performance_linear do |size| # O(N)
+      #assert_performance_power do |size| # O(N^c)
+      #assert_performance_exponential do |size| # O(c^N)
       assert_performance_linear do |size|
         solution(@candidates[size])
       end
