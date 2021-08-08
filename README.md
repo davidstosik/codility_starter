@@ -16,24 +16,30 @@ I have extracted the boilerplate code to a reusable template in Ruby to share it
 ## Using the template
 
 1. Install Ruby 2.2.
+
     Unfortunately, Codility's Ruby is a very old 2.2.0, so you'll need to make sure you run your code under the same version. (Or you'll risk to face incompatibilities.)
 
 2. Make a copy of the template.
+
     This is not compulsory, but at least you'll be able to give it an explicit name, and to reuse the template if you have multiple exercises to solve.
 
 3. Define the parameters that will be passed to your solution.
+
     The `Solution` class is a `Struct` which attributes are the inputs passed in. You need to change the struct to match the attributes that the solution would take. For example, if two parameters `a` and `b` are passed in, you'd write:
     ```rb
     Solution = Struct.new(:a, :b) do
     ```
 
 4. Implement the `Solution#run` method.
+
     This is the method that will return the result for the solution. You can access the parameters previously defined as instance variables (eg. `a` and `b`). You have freedom to extract methods.
 
 5. Write tests.
+
     The template already includes all the boilerplate code. Your first test should just be about adding all the examples provided in the exercise to the `test_examples` test case. There's also a `test_edge_cases` test case, to remind the developer that some edge cases might be worth testing. As per [Minitest](https://github.com/seattlerb/minitest), any method prefixed with `test_` in the `TestSolution` class will define a test case.
 
 6. Benchmark.
+
     This step is optional, and unnecessary in some problems. (The Codility exercise usually specifies whether it wants a _performant_ solution, or just focuses on _correctness_.)
     Using [Minitest's benchmarks](https://github.com/seattlerb/minitest#benchmarks-) was convenient too. It allows us to test the performance of a solution with several methods asserting the algorithm's performance level, which should correspond to different [big O](https://en.wikipedia.org/wiki/Big_O_notation) levels of performance:
       - `assert_performance_constant`: the performance of the solution is constant, and does not depend on the problem's size (`O(1)`)
@@ -49,6 +55,7 @@ I have extracted the boilerplate code to a reusable template in Ruby to share it
     Playing around with the `assert_performance_` method that you use, you should be able, in most cases, to determine the performance of your solution. See [minitest/benchmark](https://github.com/seattlerb/minitest#benchmarks-)'s documentation for more details.
 
 7. Run locally to see the results.
+
     You can now run the file locally to see if you tests pass:
     ```sh
     RUN_TESTS=1 ruby my_file.rb
@@ -56,6 +63,7 @@ I have extracted the boilerplate code to a reusable template in Ruby to share it
     It is necessary to set the environment variable `RUN_TESTS=1`, as without it, nothing will run. (This is the trick that allows us to paste the whole file as-is in Codility.)
 
 8. Paste your solution in Codility's editor.
+
     Once you are satisfied with your solution, you can paste the whole file in the editor. This is convenient as you'll be able to use quick ways to copy the whole code such as `Cmd+A Cmd+C` (select all, copy), or `cat my_file.rb | pbcopy` (on macOS).
 
 ## Concepts
